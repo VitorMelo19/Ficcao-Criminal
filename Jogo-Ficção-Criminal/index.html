@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ficção Criminal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Tela Inicial -->
+        <div id="home-screen" class="screen">
+            <div class="navigation-buttons">
+                <button onclick="comojogar()">Como Jogar</button>
+                <button onclick="startAdventure()">Iniciar Aventura</button>
+            </div>
+        </div>
+
+        <!-- Tela de como jogar -->
+        <div id="comojogar" class="screen" style="display: none;">
+            <div id="comojogar-page-1" class="comojogar-page">
+                <div class="navigation-buttons">
+                    <button onclick="goBackToHome()">Voltar</button>
+                    <button onclick="goToPage('comojogar-page-1', 'comojogar-page-2')">Avançar</button>
+                </div>
+            </div>
+            <div id="comojogar-page-2" class="comojogar-page" style="display: none;">
+                <div class="navigation-buttons">
+                    <button onclick="goToPage('comojogar-page-2', 'comojogar-page-1')">Voltar</button>
+                    <button onclick="goToPage('comojogar-page-2', 'comojogar-page-3')">Avançar</button>
+                </div>
+            </div>
+            <div id="comojogar-page-3" class="comojogar-page" style="display: none;">
+                <div class="navigation-buttons">
+                    <button onclick="goToPage('comojogar-page-3', 'comojogar-page-2')">Voltar</button>
+                    <button onclick="goBackToAdventure()">Página Inicial</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tela de Seleção de Aventura -->
+        <div id="adventure-screen" class="screen" style="display: none;">
+            <div class="navigation-buttons">
+                <button onclick="startAdventure1()">Caso 1</button>
+                <button onclick="startAdventure2()">Caso 2</button>
+                <button onclick="startAdventure3()">Caso 3</button>
+                <button onclick="goBackTocomojogar()">Como Jogar</button>
+                <button onclick="goBackToHome()">Sair</button>
+            </div>
+        </div>
+
+ <!-- Tela de Aventura 1 -->
+<div id="adventure1-screen" class="screen" style="display: none;">
+    <div id="adventure1-page-1" class="adventure-page">
+        <div class="navigation-buttons">
+            <button onclick="goBackToAdventure()">Voltar</button>
+            <button onclick="goToPage('adventure1-page-1', 'adventure1-page-2')">Avançar</button>
+        </div>
+    </div>
+    <div id="adventure1-page-2" class="adventure-page" style="display: none;">
+        <div class="navigation-buttons">
+            <button onclick="goToPage('adventure1-page-2', 'adventure1-page-1')">Voltar</button>
+            <button onclick="goToPage('adventure1-page-2', 'adventure1-page-3')">Avançar</button>
+        </div>
+    </div>
+    <div id="adventure1-page-3" class="adventure-page" style="display: none;">
+        <div class="navigation-buttons">
+            <button onclick="goToPage('adventure1-page-3', 'adventure1-page-2')">Voltar</button>
+            <button onclick="goToPage('adventure1-page-3', 'adventure1-page-4')">Avançar</button>
+        </div>
+    </div>
+    <div id="adventure1-page-4" class="adventure-page" style="display: none;">
+        <div class="question-buttons">
+            <button onclick="handleAnswer('wrong')">A) O assassino entrou pela janela.</button>
+            <button onclick="handleAnswer('correct')">B) A janela foi quebrada apenas para despistar.</button>
+        </div>
+        <div class="navigation-buttons">
+            <button onclick="goToPage('adventure1-page-4', 'adventure1-page-3')">Voltar</button>
+        </div>
+    </div>
+    <div id="adventure1-page-5" class="adventure-page" style="display: none;">
+        <div class="question-buttons">
+            <button onclick="handleAnswerPage5('correct')">A) Ela está mentindo sobre onde estava.</button>
+            <button onclick="handleAnswerPage5('wrong')">B) A Sra. Wilkins ouviu o barulho da cozinha.</button>
+        </div>
+        <div class="navigation-buttons">
+            <button onclick="goToPage('adventure1-page-5', 'adventure1-page-4')">Voltar</button>
+        </div>
+    </div>
+    <div id="adventure1-page-6" class="adventure-page" style="display: none;">
+        <div class="question-buttons">
+            <button onclick="handleAnswerPage6('correct')">A) O punhal já estava fora da gaveta antes do crime.</button>
+            <button onclick="handleAnswerPage6('wrong')">B) O assassino pegou o punhal da gaveta trancada.</button>
+        </div>
+        <div class="navigation-buttons">
+            <button onclick="goToPage('adventure1-page-6', 'adventure1-page-5')">Voltar</button>
+        </div>
+    </div>
+    <div id="adventure1-page-7" class="adventure-page" style="display: none;">
+        <div class="question-buttons">
+            <button onclick="handleAnswerPage7('wrong')">A) O crime foi um ato de vingança pessoal.</button>
+            <button onclick="handleAnswerPage7('correct')">B) O crime foi motivado por dinheiro.</button>
+        </div>
+        <div class="navigation-buttons">
+            <button onclick="goToPage('adventure1-page-7', 'adventure1-page-6')">Voltar</button>
+            <button onclick="goToPage('adventure1-page-7', 'adventure1-page-8')">Avançar</button>
+        </div>
+    </div>
+    <div id="adventure1-page-8" class="adventure-page" style="display: none;">
+        <div class="navigation-buttons">
+            <button onclick="goToPage('adventure1-page-8', 'adventure1-page-7')">Voltar</button>
+            <button onclick="goToPage('adventure1-page-8', 'adventure1-page-9')">Avançar</button>
+        </div>
+    </div>
+
+    <div id="adventure1-page-9" class="adventure-page" style="display: none;">
+        <div class="question-buttons">
+            <button onclick="handleAnswerPage9('correct')">A) O culpado é o Sr. Graves.</button>
+            <button onclick="handleAnswerPage9('wrong')">B) O culpado é a Sra. Wilkins.</button>
+        </div>
+        <div class="navigation-buttons">
+            <button onclick="goToPage('adventure1-page-9', 'adventure1-page-8')">Voltar</button>
+        </div>
+    </div>
+    <div id="adventure1-page-10" class="adventure-page" style="display: none;">
+        <div class="navigation-buttons">
+            <button onclick="goBackToAdventure()">Voltar ao Início</button>
+            <button onclick="goToAdventure2FromPage10()">Próxima Fase</button>
+        </div>
+    </div>
+</div>
+
+        <!-- Tela de Aventura 2 -->
+        <div id="adventure2-screen" class="screen" style="display: none;">
+            <!-- Páginas internas da Aventura 2 -->
+            <div id="adventure2-page-1" class="adventure-page" style="display: none;">
+                <div class="navigation-buttons">
+                    <button onclick="goBackToAdventure()">Voltar ao Início</button>
+                    <button onclick="goToPage('adventure2-page-1', 'adventure2-page-2')">Avançar</button>
+                </div>
+            </div>
+            <div id="adventure2-page-2" class="adventure-page" style="display: none;">
+                <div class="navigation-buttons">
+                    <button onclick="goToPage('adventure2-page-2', 'adventure2-page-1')">Voltar</button>
+                    <button onclick="goToPage('adventure2-page-2', 'adventure2-page-3')">Avançar</button>
+                </div>
+         </div>
+         <div id="adventure2-page-3" class="adventure-page" style="display: none;">
+            <div class="navigation-buttons">
+                <button onclick="goToPage('adventure2-page-3', 'adventure2-page-2')">Voltar</button>
+                <button onclick="goToPage('adventure2-page-3', 'adventure2-page-4')">Avançar</button>
+            </div>
+        </div>
+        <div id="adventure2-page-4" class="adventure-page" style="display: none;">
+            <div class="navigation-buttons">
+                <button onclick="goToPage('adventure2-page-4', 'adventure2-page-3')">Voltar</button>
+                <button onclick="goToPage('adventure2-page-4', 'adventure2-page-5')">Avançar</button>
+            </div>
+        </div>
+        <div id="adventure2-page-5" class="adventure-page" style="display: none;">
+            <div class="question-buttons">
+                <button onclick="handleAnswerPage5A2('correct')">A) Alguém vinha visitar Eleanor frequentemente antes de sua morte.</button>
+                <button onclick="handleAnswerPage5A2('wrong')">B) A frase é apenas um verso poético sem significado.</button>
+            </div>
+            <div class="navigation-buttons">
+                <button onclick="goToPage('adventure2-page-5', 'adventure2-page-4')">Voltar</button>
+                <button onclick="goToPage('adventure2-page-5', 'adventure2-page-6')">Avançar</button>
+            </div>
+        </div>
+        <div id="adventure2-page-6" class="adventure-page" style="display: none;">
+            <div class="question-buttons">
+                <button onclick="handleAnswerPage6A2('wrong')">A) A fita foi manipulada para parecer ameaçadora.</button>
+                <button onclick="handleAnswerPage6A2('correct')">B) A gravação foi feita durante um encontro secreto.</button>
+            </div>
+            <div class="navigation-buttons">
+                <button onclick="goToPage('adventure2-page-6', 'adventure2-page-5')">Voltar</button>
+                <button onclick="goToPage('adventure2-page-6', 'adventure2-page-7')">Avançar</button>
+            </div>
+        </div>
+        <div id="adventure2-page-7" class="adventure-page" style="display: none;">
+            <div class="question-buttons">
+                <button onclick="handleAnswerPage7A2('correct')">A) Marianna está dizendo a verdade de forma cifrada.</button>
+                <button onclick="handleAnswerPage7A2('wrong')">B) Marianna está perturbada e suas palavras são delírios.</button>
+            </div>
+            <div class="navigation-buttons">
+                <button onclick="goToPage('adventure2-page-7', 'adventure2-page-6')">Voltar</button>
+                <button onclick="goToPage('adventure2-page-7', 'adventure2-page-8')">Avançar</button>
+            </div>
+        </div>
+        <div id="adventure2-page-8" class="adventure-page" style="display: none;">
+            <div class="question-buttons">
+                <button onclick="handleAnswerPage8A2('wrong')">A) A presença dos três é coincidência e não tem relevância.</button>
+                <button onclick="handleAnswerPage8A2('correct')">B) Os três homens formavam um grupo secreto que 
+                <p>se encontrava nas noites das apresentações.</p></button>
+            </div>
+            <div class="navigation-buttons">
+                <button onclick="goToPage('adventure2-page-8', 'adventure2-page-7')">Voltar</button>
+                <button onclick="goToPage('adventure2-page-8', 'adventure2-page-9')">Avançar</button>
+            </div>
+        </div>
+        <div id="adventure2-page-9" class="adventure-page" style="display: none;">
+            <div class="question-buttons">
+                <button onclick="handleAnswerPage9A2('wrong')">A) Eleanor foi vítima de um crime passional.</button>
+                <button onclick="handleAnswerPage9A2('correct')">B) Eleanor foi morta para proteger <br>um segredo de manipulação da cidade.</br></button>
+            </div>
+            <div class="navigation-buttons">
+                <button onclick="goToPage('adventure2-page-9', 'adventure2-page-8')">Voltar</button>
+                <button onclick="goToPage('adventure2-page-9', 'adventure2-page-10')">Avançar</button>
+            </div>
+        </div>
+        <div id="adventure2-page-10" class="adventure-page" style="display: none;">
+            <div class="navigation-buttons">
+                <button onclick="goBackToAdventure()">Voltar ao Início</button>
+                <button onclick="goToAdventure3FromPage10()">Próxima Fase</button>
+            </div>
+        </div>
+    </div>
+
+        <!-- Tela de Aventura 3 -->
+        <div id="adventure3-screen" class="screen" style="display: none;">
+            <!-- Páginas internas da Aventura 3 -->
+            <div id="adventure3-page-1" class="adventure-page" style="display: none;">
+                <div class="navigation-buttons">
+                    <button onclick="goBackToAdventure()">Voltar</button>
+                    <button onclick="goToPage('adventure3-page-1', 'adventure3-page-2')">Avançar</button>
+                </div>
+            </div>
+            <div id="adventure3-page-2" class="adventure-page" style="display: none;">
+                <div class="navigation-buttons">
+                    <button onclick="goToPage('adventure3-page-2', 'adventure3-page-1')">Voltar</button>
+                    <button onclick="goToPage('adventure3-page-2', 'adventure3-page-3')">Avançar</button>
+                </div>
+            </div>
+            <div id="adventure3-page-3" class="adventure-page" style="display: none;">
+                <div class="question-buttons">
+                    <button onclick="handleAnswerPage3A3('wrong')">A)  Uma lista de compras com datas recentes</button>
+                    <button onclick="handleAnswerPage3A3('wrong')">B) Uma receita de café anotada à mão </button>
+                    <button onclick="handleAnswerPage3A3('correct')">C) Nomes de figuras públicas locais e a frase <P>"TUDO COMEÇOU COM O INCÊNDIO NA FÁBRICA. HÁ UM PADRÃO."</P></button>
+                    <button onclick="handleAnswerPage3A3('wrong')">D) Contas mensais não pagas</button>
+                </div>
+                <div class="navigation-buttons">
+                    <button onclick="goToPage('adventure3-page-3', 'adventure3-page-2')">Voltar</button>
+                    <button onclick="goToPage('adventure3-page-3', 'adventure3-page-4')">Avançar</button>
+                </div>
+            </div>
+            <div id="adventure3-page-4" class="adventure-page" style="display: none;">
+                <div class="navigation-buttons">
+                    <button onclick="goToPage('adventure3-page-4', 'adventure3-page-3')">Voltar</button>
+                    <button onclick="goToPage('adventure3-page-4', 'adventure3-page-5')">Avançar</button>
+                </div>
+            </div>
+            <div id="adventure3-page-5" class="adventure-page" style="display: none;">
+                <div class="question-buttons">
+                    <button onclick="handleAnswer('wrong')">A) Todas as vítimas apresentavam traumatismo craniano externo</button>
+                    <button onclick="handleAnswer('correct')">B) Os laudos tinham o mesmo padrão de morte <br>com hemorragia interna sem marcas externas</br></button>
+                    <button onclick="handleAnswer('wrong')">C) Os documentos estavam assinados digitalmente por outra pessoa</button>
+                    <button onclick="handleAnswer('wrong')">D) Todas as vítimas tinham doenças pré-existentes listadas</button>
+                </div>
+                <div class="navigation-buttons">
+                    <button onclick="goToPage('adventure3-page-5', 'adventure3-page-4')">Voltar</button>
+                    <button onclick="goToPage('adventure3-page-5', 'adventure3-page-6')">Avançar</button>
+                </div>
+            </div>
+            <div id="adventure3-page-6" class="adventure-page" style="display: none;">
+                <div class="navigation-buttons">
+                    <button onclick="goToPage('adventure3-page-6', 'adventure3-page-5')">Voltar</button>
+                    <button onclick="goToPage('adventure3-page-6', 'adventure3-page-7')">Avançar</button>
+                </div>
+            </div>
+            <div id="adventure3-page-7" class="adventure-page" style="display: none;">
+                <div class="question-buttons">
+                    <button onclick="handleAnswer('wrong')">A) Uma reportagem antiga sobre a fábrica</button>
+                    <button onclick="handleAnswer('wrong')">B) Uma gravação de áudio entre Clara e Sandra</button>
+                    <button onclick="handleAnswer('wrong')">C)  Um bilhete com o endereço da delegacia</button>
+                    <button onclick="handleAnswer('correct')">D)  Uma cópia do caderno de Emily com anotações feitas por Clara</button>
+                </div>
+                <div class="navigation-buttons">
+                    <button onclick="goToPage('adventure3-page-7', 'adventure3-page-6')">Voltar</button>
+                    <button onclick="goToPage('adventure3-page-7', 'adventure3-page-8')">Avançar</button>
+                </div>
+            </div>
+            <div id="adventure3-page-8" class="adventure-page" style="display: none;">
+                <div class="navigation-buttons">
+                    <button onclick="goToPage('adventure3-page-8', 'adventure3-page-7')">Voltar</button>
+                    <button onclick="goToPage('adventure3-page-8', 'adventure3-page-9')">Avançar</button>
+                </div>
+            </div>
+            <div id="adventure3-page-9" class="adventure-page" style="display: none;">
+                <div class="question-buttons">
+                    <button onclick="handleAnswer('correct')">A) Um vídeo mostrando Leon aplicando injeções em uma das vítimas</button>
+                    <button onclick="handleAnswer('wrong')">B) Uma foto de Leon na fábrica</button>
+                    <button onclick="handleAnswer('wrong')">C) Um e-mail entre Leon e Sandra discutindo a cobertura do laudo</button>
+                    <button onclick="handleAnswer('wrong')">D) Uma gravação de voz de Emily sobre suspeitas médicas</button>
+                </div>
+                <div class="navigation-buttons">
+                    <button onclick="goToPage('adventure3-page-9', 'adventure3-page-8')">Voltar</button>
+                    <button onclick="goToPage('adventure3-page-9', 'adventure3-page-10')">Avançar</button>
+                </div>
+            </div>
+            <div id="adventure3-page-10" class="adventure-page" style="display: none;">
+                <div class="navigation-buttons">
+                    <button onclick="goToPage('adventure3-page-10', 'adventure3-page-9')">Voltar</button>
+                    <button onclick="goToPage('adventure3-page-10', 'adventure3-page-11')">Avançar</button>
+                </div>
+            </div>
+            <div id="adventure3-page-11" class="adventure-page" style="display: none;">
+                <div class="question-buttons">
+                    <button onclick="handleAnswer('correct')">A) A confissão de Sandra sobre a morte de Emily</button>
+                    <button onclick="handleAnswer('wrong')">B) O histórico de chamadas de Barlow</button>
+                    <button onclick="handleAnswer('wrong')">C) A folha de ponto da fábrica</button>
+                    <button onclick="handleAnswer('wrong')">D) A compra de seringas pela prefeitura</button>
+                </div>
+                <div class="navigation-buttons">
+                    <button onclick="goToPage('adventure3-page-11', 'adventure3-page-10')">Voltar</button>
+                    <button onclick="goToPage('adventure3-page-11', 'adventure3-page-12')">Avançar</button>
+                </div>
+            </div>
+            <div id="adventure3-page-12" class="adventure-page" style="display: none;">
+                <div class="navigation-buttons">
+                    <button onclick="goToPage('adventure3-page-12', 'adventure3-page-11')">Voltar</button>
+                    <button onclick="goToPage('adventure3-page-12', 'adventure3-page-13')">Avançar</button>
+                </div>
+            </div>
+            <div id="adventure3-page-13" class="adventure-page" style="display: none;">
+                <div class="navigation-buttons">
+                    <button onclick="goToPage('adventure3-page-13', 'adventure3-page-12')">Voltar</button>
+                    <button onclick="goToPage('adventure3-page-13', 'adventure3-page-14')">Avançar</button>
+                </div>
+            </div>
+            <div id="adventure3-page-14" class="adventure-page" style="display: none;">
+                <div class="navigation-buttons">
+                    <button onclick="goBackToAdventure()">Voltar ao Início</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="game-over-page" class="screen" style="display: none;">
+            <div id="game-over-page-1" class="game-over-page">
+                <div class="navigation-buttons">
+                    <button onclick="goBackToHome()">Voltar</button>
+                    <button onclick="restartGame()">Reiniciar Jogo</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="aventura1.js"></script>
+    <script src="aventura2.js"></script>
+    <script src="aventura3.js"></script>
+</body>
+</html>
