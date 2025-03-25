@@ -12,15 +12,13 @@ Bem-vindo ao *Ficção Criminal*, um jogo interativo de mistério e investigaç�
 ## 👥 Participantes
 
 - [Vitor Melo](https://github.com/VitorMelo19)  
-- [Eriane Dias](#)
+- [Eriane Dias](https://github.com/ErianeAds)
 ---
 
 ## 🧠 Sobre o Jogo
 
 O jogo é dividido em **três aventuras principais (casos policiais)**, cada uma com sua história única.  
-O jogador deve analisar pistas, responder perguntas e escolher as decisões corretas para seguir adiante (cada erro custa uma chance!).
-
-Se perder todas as chances em um caso, será levado à tela de **Game Over**, onde poderá reiniciar somente aquele caso, mantendo o progresso dos outros.
+O jogador deve analisar pistas, responder perguntas e escolher as decisões corretas para seguir adiante - cada erro custa uma chance!.
 
 ---
 
@@ -44,7 +42,7 @@ Ali tera umas das instruções de como:
 - O que acontece ao acertar ou errar;
 
 **Cada pergunta possui apenas uma alternativa correta.**  
-Errar resulta na perda de uma chance. Ao perder todas, o jogador será redirecionado à tela *Game Over*, com opções para tentar novamente.
+Errar resulta na perda de uma chance. Ao perder todas, o jogador será redirecionado à tela *Game Over*,  onde poderá reiniciar somente aquele caso, mantendo o progresso dos outros.
 
 ---
 
