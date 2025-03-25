@@ -1,6 +1,10 @@
 
 # 🕵️‍♂️ Ficção Criminal
 
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/e012b6cc-3c73-4de8-83e7-fed05bbf72ac" alt="Tela de Início" width="800"/>
+</p>
+
 Bem-vindo ao *Ficção Criminal*, um jogo interativo de mistério e investigação, onde suas decisões definem o rumo de três casos intrigantes. Com ambientações envolventes, enredos ricos e desafios lógicos, o jogador é convidado a resolver crimes usando sua capacidade dedutiva — mas cuidado, você só tem 3 chances por caso!
 
 ---
