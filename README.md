@@ -7,17 +7,14 @@ Bem-vindo ao *Ficção Criminal*, um jogo interativo de mistério e investigaç�
 
 ## 👥 Participantes
 
-- [Vitor Melo](#)  
-- [Eriane](#)
-
-> *(Substitua os `#` pelos links reais dos perfis de GitHub.)*
-
+- [Vitor Melo](https://github.com/VitorMelo19)  
+- [Eriane Dias](#)
 ---
 
 ## 🧠 Sobre o Jogo
 
 O jogo é dividido em **três aventuras principais (casos policiais)**, cada uma com sua história única.  
-O jogador deve analisar pistas, responder perguntas e escolher as decisões corretas para seguir adiante — cada erro custa uma chance!
+O jogador deve analisar pistas, responder perguntas e escolher as decisões corretas para seguir adiante (cada erro custa uma chance!).
 
 Se perder todas as chances em um caso, será levado à tela de **Game Over**, onde poderá reiniciar somente aquele caso, mantendo o progresso dos outros.
 
@@ -37,12 +34,10 @@ Se perder todas as chances em um caso, será levado à tela de **Game Over**, on
 ## 🕹️ Como Jogar
 
 Na tela inicial, clique em **“Como Jogar”** para visualizar um tutorial em imagens interativas (páginas 2, 3 e 4).  
-Você aprenderá:
+Ali tera umas das instruções de como:
 
-- Como navegar pelas páginas do jogo;
 - Como responder as perguntas;
 - O que acontece ao acertar ou errar;
-- Como reiniciar a aventura ou voltar ao início.
 
 **Cada pergunta possui apenas uma alternativa correta.**  
 Errar resulta na perda de uma chance. Ao perder todas, o jogador será redirecionado à tela *Game Over*, com opções para tentar novamente.
@@ -60,7 +55,7 @@ git clone https://github.com/seuusuario/ficcao-criminal.git
 2. Acesse a pasta do projeto:
 
 ```bash
-cd ficcao-criminal
+cd jogo-ficcao-criminal
 ```
 
 3. Execute o arquivo `index.html` em seu navegador:
